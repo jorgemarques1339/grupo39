@@ -195,7 +195,7 @@
         </div>
         <div class="bg-[#060a08]/60 border border-white/10 rounded-2xl p-3.5 relative shadow-inner">
           <i class="fa-solid fa-quote-left absolute -top-2 -left-1 text-rio-neon/40 text-sm"></i>
-          <p class="text-[11px] text-gray-300 font-normal leading-relaxed text-center">
+          <p class="text-[13px] text-gray-300 font-normal leading-relaxed text-center">
             O <strong class="text-white font-bold">Grupo 39</strong> é a claque independente dedicada a empurrar o Rio
             Ave FC. Na nossa bancada vivemos o futebol de forma autêntica: leais ao clube e unidos como uma família do
             primeiro ao último minuto.
@@ -288,64 +288,40 @@
         <h2 class="font-display font-bold text-xs uppercase text-white tracking-wide">Como Entrar</h2>
       </div>
 
-      <div class="grid grid-cols-3 gap-2 text-center">
-        <div class="bg-black/40 border border-white/5 p-2.5 rounded-2xl flex flex-col items-center">
-          <span
-            class="w-6 h-6 rounded-full bg-rio-neon text-black font-black text-[11px] flex items-center justify-center mb-1.5">1</span>
-          <span class="text-[11px] font-bold text-white">Fala Connosco</span>
-          <span class="text-[9px] text-gray-400 leading-tight mt-0.5">Via WhatsApp</span>
+      <div class="relative pl-2 mt-3 space-y-3">
+        <!-- Linha vertical -->
+        <div class="absolute left-[19.5px] top-3 bottom-4 w-px bg-gradient-to-b from-rio-neon via-rio-neon/30 to-transparent"></div>
+
+        <div class="relative flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-rio-neon text-black font-black text-xs flex items-center justify-center shrink-0 shadow-[0_0_12px_rgba(0,255,115,0.4)] z-10">1</div>
+          <div class="bg-[#060a08]/80 border border-white/5 rounded-2xl p-3 flex-1">
+            <div class="text-xs font-bold text-white leading-tight mb-0.5">Fala Connosco</div>
+            <div class="text-[10px] text-gray-400 leading-snug">Usa o botão do WhatsApp.</div>
+          </div>
         </div>
 
-        <div class="bg-black/40 border border-white/5 p-2.5 rounded-2xl flex flex-col items-center">
-          <span
-            class="w-6 h-6 rounded-full bg-rio-neon text-black font-black text-[11px] flex items-center justify-center mb-1.5">2</span>
-          <span class="text-[11px] font-bold text-white">Tira Dúvidas</span>
-          <span class="text-[9px] text-gray-400 leading-tight mt-0.5">Com a direção</span>
+        <div class="relative flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-black border-2 border-rio-neon text-rio-neon font-black text-xs flex items-center justify-center shrink-0 z-10">2</div>
+          <a href="https://wa.me/?text=Ol%C3%A1!%20Tenho%20algumas%20d%C3%BAvidas%20sobre%20o%20funcionamento%20da%20claque." target="_blank" class="bg-[#060a08]/80 border border-rio-neon/40 hover:border-rio-neon rounded-2xl p-3 flex-1 flex items-center justify-between transition-colors shadow-inner">
+            <div>
+              <div class="text-xs font-bold text-white leading-tight mb-0.5">Tira Dúvidas</div>
+              <div class="text-[10px] text-gray-400 leading-snug">Fala diretamente no WhatsApp.</div>
+            </div>
+            <i class="fa-brands fa-whatsapp text-rio-neon text-xl"></i>
+          </a>
         </div>
 
-        <div class="bg-black/40 border border-white/5 p-2.5 rounded-2xl flex flex-col items-center">
-          <span
-            class="w-6 h-6 rounded-full bg-rio-neon text-black font-black text-[11px] flex items-center justify-center mb-1.5">3</span>
-          <span class="text-[11px] font-bold text-white">Vem ao Jogo</span>
-          <span class="text-[9px] text-gray-400 leading-tight mt-0.5">Cantar na bancada</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 6. PERGUNTAS FREQUENTES (FAQ) -->
-    <div class="glass-card border border-rio-cardborder p-4 rounded-3xl space-y-2 animate-fade-in-up delay-500">
-      <div class="flex items-center gap-2 mb-1">
-        <span class="w-6 h-6 rounded-lg bg-rio-neon/10 text-rio-neon flex items-center justify-center text-xs">
-          <i class="fa-solid fa-circle-question"></i>
-        </span>
-        <h2 class="font-display font-bold text-xs uppercase text-white tracking-wide">Dúvidas Frequentes</h2>
-      </div>
-
-      <div class="border border-white/5 rounded-2xl overflow-hidden bg-black/40">
-        <button type="button" onclick="toggleFaq('faq1')"
-          class="w-full p-3 text-left flex items-center justify-between text-xs font-bold text-white">
-          <span>Preciso de ser sócio do clube?</span>
-          <i id="faq1-icon"
-            class="fa-solid fa-chevron-down text-rio-neon text-xs transition-transform duration-200"></i>
-        </button>
-        <div id="faq1" class="hidden px-3 pb-3 text-[11px] text-gray-300 border-t border-white/5 pt-2 leading-relaxed">
-          Para estar com o Grupo 39 o essencial é apoiar o Rio Ave com energia. Para bilhetes nos Arcos, as condições
-          seguem a bilhética do clube.
-        </div>
-      </div>
-
-      <div class="border border-white/5 rounded-2xl overflow-hidden bg-black/40">
-        <button type="button" onclick="toggleFaq('faq2')"
-          class="w-full p-3 text-left flex items-center justify-between text-xs font-bold text-white">
-          <span>Há viagens para jogos fora?</span>
-          <i id="faq2-icon"
-            class="fa-solid fa-chevron-down text-rio-neon text-xs transition-transform duration-200"></i>
-        </button>
-        <div id="faq2" class="hidden px-3 pb-3 text-[11px] text-gray-300 border-t border-white/5 pt-2 leading-relaxed">
-          Sim, organizamos autocarros e caravanas a partir de Vila do Conde com reserva prévia comunicada aos membros.
+        <div class="relative flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-black border-2 border-white/20 text-white/70 font-black text-xs flex items-center justify-center shrink-0 z-10">3</div>
+          <div class="bg-[#060a08]/80 border border-white/5 rounded-2xl p-3 flex-1">
+            <div class="text-xs font-bold text-white leading-tight mb-0.5">Vem ao Jogo</div>
+            <div class="text-[10px] text-gray-400 leading-snug">Junta-te a nós na bancada!</div>
+          </div>
         </div>
       </div>
     </div>
+
+
 
     <!-- Redes e Partilha -->
     <div class="flex items-center justify-center gap-2.5 pt-1 text-xs text-gray-400">
@@ -416,18 +392,6 @@
 
   <script>
     let isQrReady = false;
-
-    function toggleFaq(id) {
-      const el = document.getElementById(id);
-      const icon = document.getElementById(id + '-icon');
-      if (el) {
-        const isHidden = el.classList.contains('hidden');
-        el.classList.toggle('hidden');
-        if (icon) {
-          icon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
-        }
-      }
-    }
 
     function resolveUrl() {
       // URL original: https://jorgemarques1339.github.io/grupo39/
