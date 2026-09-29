@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Grupo 39 | Ultras Rio Ave FC</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Space Grotesk & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- QRCode.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            rio: {
+              pitch: '#060a08',
+              card: '#0d1511',
+              cardborder: '#16281e',
+              green: '#008744',
+              neon: '#00ff73',
+              darkgreen: '#042714'
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif']
+          },
+          boxShadow: {
+            'glow-neon': '0 0 35px -5px rgba(0, 255, 115, 0.45)',
+            'glow-card': '0 10px 30px -10px rgba(0, 135, 68, 0.3)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #060a08;
+      color: #f3f4f6;
+      font-family: 'Outfit', sans-serif;
+      touch-action: manipulation;
+    }
+    
+    /* Modern Mesh Gradient Background */
+    .hero-glow {
+      background: radial-gradient(circle at 50% 10%, rgba(0, 255, 115, 0.16) 0%, rgba(0, 135, 68, 0.08) 35%, transparent 70%);
+    }
+
+    .glass-card {
+      background: rgba(13, 21, 17, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+  </style>
+</head>
+<body class="selection:bg-rio-neon selection:text-black antialiased relative min-h-screen pb-24 hero-glow">
+
+  <!-- Header Minimalista com Status de Atividade -->
+  <header class="sticky top-0 z-40 bg-[#060a08]/90 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-md mx-auto px-4 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rio-neon opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-rio-neon"></span>
+        </span>
+        <span class="font-display font-black tracking-wider text-base text-white uppercase">GRUPO 39</span>
+        <span class="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-rio-green/20 text-rio-neon border border-rio-neon/30">RIO AVE FC</span>
+      </div>
+
+      <!-- Quick Action: QR Code -->
+      <button onclick="openQrModal()" class="w-9 h-9 rounded-2xl bg-white/5 border border-white/10 text-rio-neon hover:bg-rio-neon/20 flex items-center justify-center transition-all" title="Partilhar QR Code">
+        <i class="fa-solid fa-qrcode text-sm"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal com Prioridade no Topo -->
+  <main class="max-w-md mx-auto px-4 pt-4 space-y-4">
+    
+    <!-- 1. CARTÃO HERO PRINCIPAL: Logo Oficial + Apelo Imediato -->
+    <div class="glass-card border border-rio-cardborder p-5 rounded-3xl text-center relative overflow-hidden shadow-glow-card">
+      <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-44 h-44 bg-rio-neon/15 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Emblema do Grupo 39 -->
+      <div class="relative w-40 h-40 sm:w-44 sm:h-44 mx-auto mb-3">
+        <div class="w-full h-full bg-white rounded-3xl p-3 border-2 border-rio-neon/60 shadow-glow-neon flex items-center justify-center">
+          <svg id="vectorBadge" viewBox="0 0 500 500" class="w-full h-full drop-shadow-md select-none" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#0c0f0e">
+              <path d="M100,70 C90,115 110,150 135,170 C115,140 105,100 100,70 Z"/>
+              <path d="M60,120 C60,165 95,200 120,215 C100,190 75,150 60,120 Z"/>
+              <path d="M40,180 C50,230 80,265 115,280 C85,250 60,210 40,180 Z"/>
+              <path d="M35,245 C50,295 90,330 125,345 C95,320 60,280 35,245 Z"/>
+              <path d="M45,315 C70,365 110,395 150,405 C115,385 80,345 45,315 Z"/>
+              <path d="M75,380 C110,420 160,445 200,450 C160,430 120,400 75,380 Z"/>
+              <path d="M400,70 C410,115 390,150 365,170 C385,140 395,100 400,70 Z"/>
+              <path d="M440,120 C440,165 405,200 380,215 C400,190 425,150 440,120 Z"/>
+              <path d="M460,180 C450,230 420,265 385,280 C415,250 440,210 460,180 Z"/>
+              <path d="M465,245 C450,295 410,330 375,345 C405,320 440,280 465,245 Z"/>
+              <path d="M455,315 C430,365 390,395 350,405 C385,385 420,345 455,315 Z"/>
+              <path d="M425,380 C390,420 340,445 300,450 C340,430 380,400 425,380 Z"/>
+              <path d="M220,460 L250,490 L280,460 L250,470 Z" />
+            </g>
+            <circle cx="250" cy="260" r="145" fill="#008744" stroke="#0c0f0e" stroke-width="6"/>
+            <circle cx="250" cy="260" r="95" fill="#ffffff" />
+            <path d="M225,170 H275 V350 H225 Z" fill="#008744" />
+            <rect x="70" y="110" width="360" height="95" rx="10" fill="#0c0f0e" stroke="#ffffff" stroke-width="6" />
+            <text x="250" y="180" font-family="'Space Grotesk', Impact, sans-serif" font-weight="900" font-size="74" fill="#ffffff" text-anchor="middle" letter-spacing="4">GRUPO</text>
+            <rect x="130" y="210" width="240" height="150" rx="12" fill="#0c0f0e" stroke="#ffffff" stroke-width="7" />
+            <text x="250" y="336" font-family="'Space Grotesk', Impact, sans-serif" font-weight="900" font-size="146" fill="#ffffff" text-anchor="middle">39</text>
+          </svg>
+          <img id="customUploadedImg" src="" alt="Grupo 39" class="w-full h-full object-contain hidden">
+        </div>
+      </div>
+
+      <!-- Upload rápido local caso queira usar foto direta -->
+      <label for="localFileSwap" class="inline-flex items-center gap-1.5 text-[10px] text-gray-500 hover:text-rio-neon cursor-pointer mb-3 transition-colors">
+        <i class="fa-solid fa-camera"></i>
+        <span>Trocar por imagem local</span>
+      </label>
+      <input type="file" id="localFileSwap" accept="image/*" class="hidden" onchange="previewUserLogo(event)">
+
+      <!-- Título de Alto Impacto -->
+      <h1 class="text-2xl font-display font-black uppercase text-white leading-tight mb-1">
+        Junta-te à Nossa <span class="text-rio-neon">Bancada</span>
+      </h1>
+      <p class="text-xs text-gray-300 font-normal leading-relaxed mb-4 max-w-xs mx-auto">
+        A voz, o apoio e a paixão incondicional pelo Rio Ave FC em cada jogo, em casa e fora.
+      </p>
+
+      <!-- BOTÃO PRINCIPAL NO TOPO: Ação imediata para quem faz o scan -->
+      <a href="https://wa.me/?text=Ol%C3%A1!%20Fiz%20o%20scan%20do%20QR%20Code%20e%20quero%20juntar-me%20ao%20Grupo%2039!" 
+         target="_blank" 
+         class="w-full py-3.5 px-4 rounded-2xl bg-rio-neon text-black font-display font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-glow-neon active:scale-95 transition-all">
+        <i class="fa-brands fa-whatsapp text-base"></i> Entrar em Contacto Direto
+      </a>
+    </div>
+
+    <!-- 2. IDENTIDADE EM NÚMEROS E ESSÊNCIA (Bento Grid) -->
+    <div class="grid grid-cols-2 gap-2.5">
+      <div class="glass-card border border-rio-cardborder p-3.5 rounded-2xl">
+        <div class="text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-1 flex items-center gap-1">
+          <i class="fa-solid fa-flag text-rio-neon"></i> Cidade
+        </div>
+        <div class="text-sm font-display font-bold text-white leading-tight">Vila do Conde</div>
+        <div class="text-[11px] text-gray-400">Orgulho da nossa terra</div>
+      </div>
+
+      <div class="glass-card border border-rio-cardborder p-3.5 rounded-2xl">
+        <div class="text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-1 flex items-center gap-1">
+          <i class="fa-solid fa-bolt text-rio-neon"></i> Apoio
+        </div>
+        <div class="text-sm font-display font-bold text-rio-neon leading-tight">90 Minutos</div>
+        <div class="text-[11px] text-gray-400">Sem parar de cantar</div>
+      </div>
+    </div>
+
+    <!-- 3. QUEM SOMOS -->
+    <div class="glass-card border border-rio-cardborder p-4 rounded-3xl space-y-2">
+      <div class="flex items-center gap-2">
+        <span class="w-6 h-6 rounded-lg bg-rio-neon/10 text-rio-neon flex items-center justify-center text-xs">
+          <i class="fa-solid fa-shield-cat"></i>
+        </span>
+        <h2 class="font-display font-bold text-xs uppercase text-white tracking-wide">Quem Somos</h2>
+      </div>
+      <p class="text-xs text-gray-300 leading-relaxed">
+        O <strong class="text-white">Grupo 39</strong> é a claque independente dedicada a empurrar o Rio Ave FC. Na nossa bancada vivemos o futebol de forma autêntica: perto da caravela, leais ao clube e unidos como uma família do primeiro ao último minuto.
+      </p>
+    </div>
+
+    <!-- 4. VALORES DA BANCADA (Cartões Compactos) -->
+    <div class="glass-card border border-rio-cardborder p-4 rounded-3xl space-y-2.5">
+      <div class="flex items-center justify-between mb-1">
+        <div class="flex items-center gap-2">
+          <span class="w-6 h-6 rounded-lg bg-rio-neon/10 text-rio-neon flex items-center justify-center text-xs">
+            <i class="fa-solid fa-heart"></i>
+          </span>
+          <h2 class="font-display font-bold text-xs uppercase text-white tracking-wide">Os Nossos Valores</h2>
+        </div>
+        <span class="text-[9px] font-mono text-rio-neon uppercase font-bold">Compromisso</span>
+      </div>
+
+      <div class="space-y-1.5">
+        <div class="flex items-center gap-3 bg-black/40 border border-white/5 p-2.5 rounded-2xl">
+          <div class="w-8 h-8 rounded-xl bg-rio-green/20 text-rio-neon flex items-center justify-center text-xs shrink-0">
+            <i class="fa-solid fa-bullhorn"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-white">Voz Ativa e Apoio Constante</div>
+            <div class="text-[10px] text-gray-400">Cantar pelo clube independentemente do marcador.</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 bg-black/40 border border-white/5 p-2.5 rounded-2xl">
+          <div class="w-8 h-8 rounded-xl bg-rio-green/20 text-rio-neon flex items-center justify-center text-xs shrink-0">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-white">União & Irmandade</div>
+            <div class="text-[10px] text-gray-400">Respeito mútuo entre todos os elementos da bancada.</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 bg-black/40 border border-white/5 p-2.5 rounded-2xl">
+          <div class="w-8 h-8 rounded-xl bg-rio-green/20 text-rio-neon flex items-center justify-center text-xs shrink-0">
+            <i class="fa-solid fa-anchor"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-white">Amor a Vila do Conde</div>
+            <div class="text-[10px] text-gray-400">Orgulho nas nossas origens e tradições de mar.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. COMO ENTRAR (3 Passos Rápidos) -->
+    <div class="glass-card border border-rio-cardborder p-4 rounded-3xl space-y-2.5">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="w-6 h-6 rounded-lg bg-rio-neon/10 text-rio-neon flex items-center justify-center text-xs">
+          <i class="fa-solid fa-list-check"></i>
+        </span>
+        <h2 class="font-display font-bold text-xs uppercase text-white tracking-wide">Como Entrar</h2>
+      </div>
+
+      <div class="grid grid-cols-3 gap-2 text-center">
+        <div class="bg-black/40 border border-white/5 p-2.5 rounded-2xl flex flex-col items-center">
+          <span class="w-6 h-6 rounded-full bg-rio-neon text-black font-black text-[11px] flex items-center justify-center mb-1.5">1</span>
+          <span class="text-[11px] font-bold text-white">Fala Connosco</span>
+          <span class="text-[9px] text-gray-400 leading-tight mt-0.5">Via WhatsApp</span>
+        </div>
+
+        <div class="bg-black/40 border border-white/5 p-2.5 rounded-2xl flex flex-col items-center">
+          <span class="w-6 h-6 rounded-full bg-rio-neon text-black font-black text-[11px] flex items-center justify-center mb-1.5">2</span>
+          <span class="text-[11px] font-bold text-white">Tira Dúvidas</span>
+          <span class="text-[9px] text-gray-400 leading-tight mt-0.5">Com a direção</span>
+        </div>
+
+        <div class="bg-black/40 border border-white/5 p-2.5 rounded-2xl flex flex-col items-center">
+          <span class="w-6 h-6 rounded-full bg-rio-neon text-black font-black text-[11px] flex items-center justify-center mb-1.5">3</span>
+          <span class="text-[11px] font-bold text-white">Vem ao Jogo</span>
+          <span class="text-[9px] text-gray-400 leading-tight mt-0.5">Cantar na bancada</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. PERGUNTAS FREQUENTES (FAQ) -->
+    <div class="glass-card border border-rio-cardborder p-4 rounded-3xl space-y-2">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="w-6 h-6 rounded-lg bg-rio-neon/10 text-rio-neon flex items-center justify-center text-xs">
+          <i class="fa-solid fa-circle-question"></i>
+        </span>
+        <h2 class="font-display font-bold text-xs uppercase text-white tracking-wide">Dúvidas Frequentes</h2>
+      </div>
+
+      <div class="border border-white/5 rounded-2xl overflow-hidden bg-black/40">
+        <button type="button" onclick="toggleFaq('faq1')" class="w-full p-3 text-left flex items-center justify-between text-xs font-bold text-white">
+          <span>Preciso de ser sócio do clube?</span>
+          <i id="faq1-icon" class="fa-solid fa-chevron-down text-rio-neon text-xs transition-transform duration-200"></i>
+        </button>
+        <div id="faq1" class="hidden px-3 pb-3 text-[11px] text-gray-300 border-t border-white/5 pt-2 leading-relaxed">
+          Para estar com o Grupo 39 o essencial é apoiar o Rio Ave com energia. Para bilhetes nos Arcos, as condições seguem a bilhética do clube.
+        </div>
+      </div>
+
+      <div class="border border-white/5 rounded-2xl overflow-hidden bg-black/40">
+        <button type="button" onclick="toggleFaq('faq2')" class="w-full p-3 text-left flex items-center justify-between text-xs font-bold text-white">
+          <span>Há viagens para jogos fora?</span>
+          <i id="faq2-icon" class="fa-solid fa-chevron-down text-rio-neon text-xs transition-transform duration-200"></i>
+        </button>
+        <div id="faq2" class="hidden px-3 pb-3 text-[11px] text-gray-300 border-t border-white/5 pt-2 leading-relaxed">
+          Sim, organizamos autocarros e caravanas a partir de Vila do Conde com reserva prévia comunicada aos membros.
+        </div>
+      </div>
+    </div>
+
+    <!-- Redes e Partilha -->
+    <div class="flex items-center justify-center gap-2.5 pt-1 text-xs text-gray-400">
+      <a href="https://instagram.com" target="_blank" class="px-3 py-2 rounded-xl bg-white/5 border border-white/10 hover:text-white flex items-center gap-1.5 transition-colors">
+        <i class="fa-brands fa-instagram text-pink-400"></i> Instagram
+      </a>
+      <a href="https://facebook.com" target="_blank" class="px-3 py-2 rounded-xl bg-white/5 border border-white/10 hover:text-white flex items-center gap-1.5 transition-colors">
+        <i class="fa-brands fa-facebook text-blue-400"></i> Facebook
+      </a>
+      <button onclick="openQrModal()" class="px-3 py-2 rounded-xl bg-white/5 border border-white/10 hover:text-rio-neon flex items-center gap-1.5 transition-colors">
+        <i class="fa-solid fa-qrcode"></i> QR Code
+      </button>
+    </div>
+
+    <div class="text-center text-[10px] text-gray-600 pb-4">
+      © Grupo 39 • Rio Ave FC • Vila do Conde
+    </div>
+
+  </main>
+
+  <!-- Sticky Quick Action Bar -->
+  <div class="fixed bottom-0 left-0 right-0 p-3 bg-[#060a08]/95 backdrop-blur-md border-t border-white/10 z-30">
+    <div class="max-w-md mx-auto flex items-center gap-2">
+      <a href="https://wa.me/?text=Ol%C3%A1!%20Fiz%20o%20scan%20do%20QR%20Code%20e%20quero%20juntar-me%20ao%20Grupo%2039!" 
+         target="_blank" 
+         class="flex-1 py-3 rounded-2xl bg-rio-neon text-black font-display font-black text-xs uppercase tracking-wider text-center shadow-glow-neon flex items-center justify-center gap-2 active:scale-95 transition-all">
+        <i class="fa-brands fa-whatsapp text-sm"></i> Falar no WhatsApp
+      </a>
+      <button onclick="openQrModal()" class="w-12 h-11 rounded-2xl bg-white/10 text-rio-neon border border-white/15 flex items-center justify-center text-lg active:scale-95 transition-transform" title="Mostrar QR Code">
+        <i class="fa-solid fa-qrcode"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal: Visualizador de QR Code -->
+  <div id="qrModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-rio-card border border-rio-neon/40 max-w-xs w-full rounded-3xl p-5 text-center relative shadow-2xl">
+      <button onclick="closeQrModal()" class="absolute top-3 right-3 text-gray-400 hover:text-white p-1">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <div class="w-10 h-10 rounded-full bg-rio-neon/20 text-rio-neon flex items-center justify-center mx-auto mb-2 text-lg">
+        <i class="fa-solid fa-qrcode"></i>
+      </div>
+
+      <h3 class="font-display font-black text-base text-white uppercase mb-1">QR Code da Claque</h3>
+      <p class="text-[11px] text-gray-400 mb-3">Mostra no teu telemóvel para outro adepto ler!</p>
+
+      <div class="bg-white p-3 rounded-2xl inline-block shadow-inner mb-3">
+        <div id="canvasQR"></div>
+      </div>
+
+      <button onclick="copyLink()" id="btnCopy" class="w-full py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-bold flex items-center justify-center gap-1.5 transition-all">
+        <i class="fa-solid fa-copy"></i>
+        <span id="btnCopyText">Copiar Link</span>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    let isQrReady = false;
+
+    function toggleFaq(id) {
+      const el = document.getElementById(id);
+      const icon = document.getElementById(id + '-icon');
+      if (el) {
+        const isHidden = el.classList.contains('hidden');
+        el.classList.toggle('hidden');
+        if (icon) {
+          icon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+      }
+    }
+
+    function previewUserLogo(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const customImg = document.getElementById('customUploadedImg');
+          const vectorBadge = document.getElementById('vectorBadge');
+          if (customImg && vectorBadge) {
+            customImg.src = e.target.result;
+            customImg.classList.remove('hidden');
+            vectorBadge.classList.add('hidden');
+          }
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function resolveUrl() {
+      if (window.location.protocol === 'file:' || !window.location.href.startsWith('http')) {
+        return 'https://grupo39rioave.pt';
+      }
+      return window.location.href;
+    }
+
+    function openQrModal() {
+      const modal = document.getElementById('qrModal');
+      modal.classList.remove('hidden');
+
+      if (!isQrReady) {
+        const qrContainer = document.getElementById('canvasQR');
+        if (qrContainer && typeof QRCode !== 'undefined') {
+          qrContainer.innerHTML = '';
+          new QRCode(qrContainer, {
+            text: resolveUrl(),
+            width: 160,
+            height: 160,
+            colorDark: "#060a08",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.M
+          });
+          isQrReady = true;
+        }
+      }
+    }
+
+    function closeQrModal() {
+      document.getElementById('qrModal').classList.add('hidden');
+    }
+
+    function copyLink() {
+      const url = resolveUrl();
+      const input = document.createElement("input");
+      input.value = url;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand("copy");
+      document.body.removeChild(input);
+
+      const label = document.getElementById('btnCopyText');
+      label.textContent = "Copiado!";
+      setTimeout(() => {
+        label.textContent = "Copiar Link";
+      }, 2000);
+    }
+
+    window.addEventListener('click', function(e) {
+      if (e.target === document.getElementById('qrModal')) closeQrModal();
+    });
+  </script>
+</body>
+</html>
