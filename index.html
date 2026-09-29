@@ -171,6 +171,36 @@
 </head>
 
 <body class="selection:bg-rio-neon selection:text-black antialiased relative min-h-screen pb-24 hero-glow">
+  <!-- Splash Screen -->
+  <div id="splash-screen" class="fixed inset-0 z-[100] bg-[#040705] flex items-center justify-center transition-opacity duration-700 ease-out">
+    <div class="relative flex flex-col items-center justify-center animate-pulse">
+      <svg viewBox="0 0 500 500" class="w-32 h-32 drop-shadow-[0_0_25px_rgba(0,255,115,0.5)] select-none" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#0c0f0e">
+          <path d="M100,70 C90,115 110,150 135,170 C115,140 105,100 100,70 Z" />
+          <path d="M60,120 C60,165 95,200 120,215 C100,190 75,150 60,120 Z" />
+          <path d="M40,180 C50,230 80,265 115,280 C85,250 60,210 40,180 Z" />
+          <path d="M35,245 C50,295 90,330 125,345 C95,320 60,280 35,245 Z" />
+          <path d="M45,315 C70,365 110,395 150,405 C115,385 80,345 45,315 Z" />
+          <path d="M75,380 C110,420 160,445 200,450 C160,430 120,400 75,380 Z" />
+          <path d="M400,70 C410,115 390,150 365,170 C385,140 395,100 400,70 Z" />
+          <path d="M440,120 C440,165 405,200 380,215 C400,190 425,150 440,120 Z" />
+          <path d="M460,180 C450,230 420,265 385,280 C415,250 440,210 460,180 Z" />
+          <path d="M465,245 C450,295 410,330 375,345 C405,320 440,280 465,245 Z" />
+          <path d="M455,315 C430,365 390,395 350,405 C385,385 420,345 455,315 Z" />
+          <path d="M425,380 C390,420 340,445 300,450 C340,430 380,400 425,380 Z" />
+          <path d="M220,460 L250,490 L280,460 L250,470 Z" />
+        </g>
+        <circle cx="250" cy="260" r="145" fill="#008744" stroke="#0c0f0e" stroke-width="6" />
+        <circle cx="250" cy="260" r="95" fill="#ffffff" />
+        <path d="M225,170 H275 V350 H225 Z" fill="#008744" />
+        <rect x="70" y="110" width="360" height="95" rx="10" fill="#0c0f0e" stroke="#ffffff" stroke-width="6" />
+        <text x="250" y="180" font-family="'Space Grotesk', Impact, sans-serif" font-weight="900" font-size="74" fill="#ffffff" text-anchor="middle" letter-spacing="4">GRUPO</text>
+        <rect x="130" y="210" width="240" height="150" rx="12" fill="#0c0f0e" stroke="#ffffff" stroke-width="7" />
+        <text x="250" y="336" font-family="'Space Grotesk', Impact, sans-serif" font-weight="900" font-size="146" fill="#ffffff" text-anchor="middle">39</text>
+      </svg>
+    </div>
+  </div>
+
   <!-- Noise Overlay -->
   <div class="fixed inset-0 z-[-1] opacity-[0.03] pointer-events-none"
     style="background-image: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E&quot;);">
@@ -257,24 +287,6 @@
 
     </div>
 
-    <!-- 2. IDENTIDADE EM NÚMEROS E ESSÊNCIA (Bento Grid) -->
-    <div class="grid grid-cols-2 gap-2.5 reveal-on-scroll">
-      <div class="glass-card border border-rio-cardborder p-3.5 rounded-2xl">
-        <div class="text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-1 flex items-center gap-1">
-          <i class="fa-solid fa-flag text-rio-neon"></i> Cidade
-        </div>
-        <div class="text-sm font-display font-bold text-white leading-tight">Vila do Conde</div>
-        <div class="text-[11px] text-gray-400">Orgulho da nossa terra</div>
-      </div>
-
-      <div class="glass-card border border-rio-cardborder p-3.5 rounded-2xl">
-        <div class="text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-1 flex items-center gap-1">
-          <i class="fa-solid fa-bolt text-rio-neon"></i> Apoio
-        </div>
-        <div class="text-sm font-display font-bold text-rio-neon leading-tight">90 Minutos</div>
-        <div class="text-[11px] text-gray-400">Sem parar de cantar</div>
-      </div>
-    </div>
 
 
     <!-- 4. VALORES DA BANCADA (Cartões Compactos) -->
@@ -330,8 +342,10 @@
         <span class="w-6 h-6 rounded-lg bg-rio-neon/10 text-rio-neon flex items-center justify-center text-xs">
           <i class="fa-solid fa-list-check"></i>
         </span>
-        <h2 class="font-display font-bold text-xs uppercase text-white tracking-wide">Como Entrar</h2>
+        <h2 class="font-display font-bold text-xs uppercase text-white tracking-wide">Como Contactar ?</h2>
       </div>
+      
+      <p class="text-center text-[11px] text-gray-300 font-medium px-2 pb-1">Entre em contacto através do Whatsapp / Redes Sociais</p>
 
       <div class="relative pl-2 mt-3 space-y-3">
         <!-- Linha vertical -->
@@ -343,21 +357,20 @@
           <div
             class="w-7 h-7 rounded-full bg-rio-neon text-black font-black text-xs flex items-center justify-center shrink-0 shadow-[0_0_12px_rgba(0,255,115,0.4)] z-10">
             1</div>
-          <div class="bg-[#060a08]/80 border border-white/5 rounded-2xl p-3 flex-1">
-            <div class="text-xs font-bold text-white leading-tight mb-0.5">Use o WhatsApp ou as Redes Sociais</div>
-            <div class="text-[10px] text-gray-400 leading-snug">(ícones na barra inferior)</div>
-          </div>
+          <button onclick="highlightContactBar()"
+            class="bg-[#060a08]/80 border border-rio-neon/40 hover:border-rio-neon rounded-2xl p-3 flex-1 flex items-center justify-between transition-colors shadow-inner w-full text-left">
+            <div class="text-[11px] font-bold text-white leading-tight pr-2">Selecione a plataforma, que deseja entrar em contacto</div>
+            <i class="fa-solid fa-arrow-down text-rio-neon text-lg animate-bounce shrink-0"></i>
+          </button>
         </div>
 
         <div class="relative flex items-center gap-3">
           <div
-            class="w-7 h-7 rounded-full bg-black border-2 border-rio-neon text-rio-neon font-black text-xs flex items-center justify-center shrink-0 z-10">
+            class="w-7 h-7 rounded-full bg-black border-2 border-white/20 text-white/70 font-black text-xs flex items-center justify-center shrink-0 z-10">
             2</div>
-          <button onclick="highlightContactBar()"
-            class="bg-[#060a08]/80 border border-rio-neon/40 hover:border-rio-neon rounded-2xl p-3 flex-1 flex items-center justify-between transition-colors shadow-inner w-full text-left">
-            <div class="text-xs font-bold text-white leading-tight">Tire as suas dúvidas,</div>
-            <i class="fa-solid fa-arrow-down text-rio-neon text-xl animate-bounce"></i>
-          </button>
+          <div class="bg-[#060a08]/80 border border-white/5 rounded-2xl p-3 flex-1">
+            <div class="text-[11px] font-bold text-white leading-tight">Irá abrir uma conversa com a administração da claque</div>
+          </div>
         </div>
 
         <div class="relative flex items-center gap-3">
@@ -365,7 +378,7 @@
             class="w-7 h-7 rounded-full bg-black border-2 border-white/20 text-white/70 font-black text-xs flex items-center justify-center shrink-0 z-10">
             3</div>
           <div class="bg-[#060a08]/80 border border-white/5 rounded-2xl p-3 flex-1">
-            <div class="text-xs font-bold text-white leading-tight">Vem ao Jogo.</div>
+            <div class="text-[11px] font-bold text-white leading-tight">Vem ao jogo.</div>
           </div>
         </div>
       </div>
@@ -522,6 +535,19 @@
 
     window.addEventListener('click', function (e) {
       if (e.target === document.getElementById('qrModal')) closeQrModal();
+    });
+
+    // Lógica do Ecrã de Carregamento (Splash Screen)
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const splash = document.getElementById('splash-screen');
+        if (splash) {
+          splash.style.opacity = '0';
+          setTimeout(() => {
+            splash.style.display = 'none';
+          }, 700);
+        }
+      }, 1500); // Exibe o logótipo durante 1.5s antes de revelar a página
     });
   </script>
 </body>
