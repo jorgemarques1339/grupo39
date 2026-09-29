@@ -72,7 +72,7 @@
 
   <!-- Header Minimalista com Status de Atividade -->
   <header class="sticky top-0 z-40 bg-[#060a08]/90 backdrop-blur-md border-b border-white/5">
-    <div class="max-w-md mx-auto px-4 h-14 flex items-center justify-between">
+    <div class="max-w-md mx-auto px-4 h-14 flex items-center justify-center">
       <div class="flex items-center gap-2">
         <span class="relative flex h-2.5 w-2.5">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rio-neon opacity-75"></span>
@@ -81,11 +81,6 @@
         <span class="font-display font-black tracking-wider text-base text-white uppercase">GRUPO 39</span>
         <span class="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-rio-green/20 text-rio-neon border border-rio-neon/30">RIO AVE FC</span>
       </div>
-
-      <!-- Quick Action: QR Code -->
-      <button onclick="openQrModal()" class="w-9 h-9 rounded-2xl bg-white/5 border border-white/10 text-rio-neon hover:bg-rio-neon/20 flex items-center justify-center transition-all" title="Partilhar QR Code">
-        <i class="fa-solid fa-qrcode text-sm"></i>
-      </button>
     </div>
   </header>
 
@@ -123,16 +118,8 @@
             <rect x="130" y="210" width="240" height="150" rx="12" fill="#0c0f0e" stroke="#ffffff" stroke-width="7" />
             <text x="250" y="336" font-family="'Space Grotesk', Impact, sans-serif" font-weight="900" font-size="146" fill="#ffffff" text-anchor="middle">39</text>
           </svg>
-          <img id="customUploadedImg" src="" alt="Grupo 39" class="w-full h-full object-contain hidden">
         </div>
       </div>
-
-      <!-- Upload rápido local caso queira usar foto direta -->
-      <label for="localFileSwap" class="inline-flex items-center gap-1.5 text-[10px] text-gray-500 hover:text-rio-neon cursor-pointer mb-3 transition-colors">
-        <i class="fa-solid fa-camera"></i>
-        <span>Trocar por imagem local</span>
-      </label>
-      <input type="file" id="localFileSwap" accept="image/*" class="hidden" onchange="previewUserLogo(event)">
 
       <!-- Título de Alto Impacto -->
       <h1 class="text-2xl font-display font-black uppercase text-white leading-tight mb-1">
@@ -357,23 +344,6 @@
         if (icon) {
           icon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
         }
-      }
-    }
-
-    function previewUserLogo(event) {
-      const file = event.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          const customImg = document.getElementById('customUploadedImg');
-          const vectorBadge = document.getElementById('vectorBadge');
-          if (customImg && vectorBadge) {
-            customImg.src = e.target.result;
-            customImg.classList.remove('hidden');
-            vectorBadge.classList.add('hidden');
-          }
-        };
-        reader.readAsDataURL(file);
       }
     }
 
